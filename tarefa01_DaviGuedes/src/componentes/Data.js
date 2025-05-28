@@ -5,6 +5,7 @@ import squirtle from "../assets/squirtle.jpg";
 import axew from "../assets/axew.jpg";
 import dewott from "../assets/dewott.jpg";
 
+// lista das fotos e descrição
 export const personagens = [
     { nome: "Pikachu", imagem: pikachu, descricao: "Um Pokémon elétrico ágil e poderoso!" },
     { nome: "Charmander", imagem: charmander, descricao: "Um pequeno dragão de fogo determinado." },

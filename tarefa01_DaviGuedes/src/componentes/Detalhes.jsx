@@ -1,5 +1,5 @@
 import React from "react";
-
+// pega o index da imagem para retornala
 function Detalhes({ personagem }) {
     if (!personagem) return null;
 

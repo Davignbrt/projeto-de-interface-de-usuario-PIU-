@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 function Tema() {
     const [tema, setTema] = useState("black");
-    const [letra, setLetra] = useState("white");
+    const [letra, setLetra] = useState("gray");
 
     useEffect(() => {
         document.body.style.backgroundColor = tema;
@@ -10,8 +10,8 @@ function Tema() {
     }, [tema, letra]);
 
     function handleClick() {
-        setTema(tema === "black" ? "white" : "black");
-        setLetra(letra === "white" ? "black" : "white");
+        setTema(tema === "black" ? "gray" : "black");
+        setLetra(letra === "gray" ? "black" : "gray");
     }
 
     return (
