@@ -1,27 +1,24 @@
+import { useState } from "react";
 import { carros } from "./dados";
+import Detalhes from "./Detalhes";
 
-export default function listarCarros(){
+export default function ListarCarros() {
+    const [carroSelecionado, setCarroSelecionado] = useState(null);
+
     return (
         <>
-            <div>
-                <h1>listagem geral</h1>
-                <ul>
-                    {carros.map((item, index) => (
-                        <li key={index}>{item.nome} - {item.ano}</li>
-                    ))}
-                </ul>
+            <div className="container">
+                {carros.map((item) => (
+                    <div className="carros" key={item.id}>
+                        <h2>{item.nome} {item.ano}</h2>
+                        <h3>Fabricante: {item.fabricante}</h3>
+                        <h4>Potência: {item.potencia} à {item.combustivel}</h4>
+                        <button  onClick={() => setCarroSelecionado({...item})}>Detalhar</button>
+                    </div>
+                ))}
             </div>
             
-            <div>
-                <h1>Listagem Filtrada</h1>
-                <ul>
-                    {carros
-                        .filter((carro) => carro.ano >= 2020)
-                        .map((carro, index) => (
-                            <li key={index}>{carro.nome} -- {carro.ano}</li>
-                        ))}
-                </ul>
-            </div>
+            {carroSelecionado && <Detalhes item={carroSelecionado} />}
         </>
     );
-}
+};

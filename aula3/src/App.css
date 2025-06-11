@@ -1,42 +1,115 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+    --cor-fundo: white;
+    --cor-texto: rgb(53, 53, 53);
+    --cor-borda: rgb(53, 53, 53);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.tema-escuro {
+    --cor-fundo: rgb(53, 53, 53);
+    --cor-texto: white;
+    --cor-borda: white;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+.detalhar-carro {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid var(--cor-borda);
+    border-radius: 10px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.detalhar-carro img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
 }
 
-.card {
-  padding: 2em;
+.detalhar-carro h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.detalhar-carro h3 {
+    font-size: 18px;
+    color: var(--cor-texto);
+}
+.mudar-tema {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.mudar-tema h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.mudar-tema button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.mudar-tema button:hover {
+    background-color: var(--cor-borda);
+    color: var(--cor-texto);
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--cor-fundo);
+}
+
+.carros {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--cor-borda);
+    padding: 15px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carros:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 20px;
+    color: var(--cor-texto);
+}
+
+h3 {
+    font-size: 18px;
+    color: var(--cor-texto);
+}
+
+h4 {
+    font-size: 16px;
+    color: var(--cor-texto);
 }
